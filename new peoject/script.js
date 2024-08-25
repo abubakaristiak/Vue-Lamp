@@ -1,0 +1,19 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById("btn");
+    var light = document.getElementById("light");
+
+    function toggleBtn() {
+        btn.classList.toggle("active");
+        light.classList.toggle("light-on");
+        light.classList.toggle("light-off");
+
+        if (light.classList.contains("light-on")) {
+            light.textContent = "Light is On";
+        } else {
+            light.textContent = "Light is Off";
+        }
+    }
+btn.addEventListener("click", toggleBtn);
+});
+</script>
